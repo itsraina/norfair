@@ -137,6 +137,9 @@ Function that draws a list of detections on a frame.
 - `radius (optional)`: Radius of the circles representing the detected points.
 - `thickness (optional)`: Thickness of the circles representing the detected points.
 - `color (optional)`: [`Color`](#color) of the circles representing the detected points.
+- `color_by_label (optional)`: If `True` detections will be colored by label.
+- `draw_labels (optional)`: If `True` the detection's label will be drawn along with the detected points.
+- `label_size (optional)`: Size of the label being drawn along with the detected points.
 
 ## draw_tracked_objects
 
@@ -151,6 +154,9 @@ Function that draws a list of tracked objects on a frame.
 - `id_size (optional)`: Size of the id number being drawn on each tracked object. The id wont get drawn if `id_size` is set to 0.
 - `id_thickness (optional)`: Thickness of the id number being drawn on each tracked object.
 - `draw_points (optional)`: Boolean determining if the function should draw the points estimated by the tracked objects. If set to `True` the points get drawn, if set to `False` only the id numbers get drawn. Defaults to `True`.
+- `color_by_label (optional)`: If `True` objects will be colored by label.
+- `draw_labels (optional)`: If `True` the objects's label will be drawn along with the tracked points.
+- `label_size (optional)`: Size of the label being drawn along with the tracked points.
 
 ##  draw_debug_metrics
 
@@ -165,6 +171,8 @@ Function that draws debug information about the tracked objects on a frame. Usef
 - `color (optional)`: [`Color`](#color) of the text displaying the debug information.
 - `only_ids (optional)`: List of ids that determines which objects to display the debug information of. Only the objects whose id is in this list will get their debug information drawn on the frame.
 - `only_initializing_ids (optional)`: List of `initializing_id`s that determines which objects to display the debug information of. Only objects whose `initializing_id` is in this list will display their debug information. [`TrackedObject`](#trackedobject)s have an internal id called `initializing_id` which is used by the tracker to manage objects which may never be instantiated into full objects, it may be useful to filter objects by this id when debugging objects not correctly initializing, or initializing too often.
+- `color_by_label (optional)`: If `True` objects will be colored by label.
+- `draw_labels (optional)`: If `True` the objects's label will be drawn as a debug metric.
 
 ## Color
 
